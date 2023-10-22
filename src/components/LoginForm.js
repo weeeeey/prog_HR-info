@@ -70,15 +70,28 @@ export default function LoginForm($app) {
             switch (spanNode.children[0].id) {
                 case 'name':
                     title.innerText = `이름`;
+                    spanNode.children[0].setAttribute(
+                        'title',
+                        '2~4 글자의 한글만 입력이 가능합니다.'
+                    );
                     break;
                 case 'email':
                     title.innerText = `이메일`;
+                    spanNode.children[0].setAttribute(
+                        'title',
+                        '이메일은 영문과 숫자만 입력 가능하며 @grepp.co 형식의 이메일을 사용해야 합니다.'
+                    );
                     break;
                 case 'nickname':
                     title.innerText = `닉네임`;
+                    spanNode.children[0].setAttribute(
+                        'title',
+                        '대소문자 구분 없이 3~10글자의 영문으로 작성해야 합니다.'
+                    );
                     break;
                 case 'role':
                     title.innerText = `직군`;
+
                     break;
                 case 'mbti':
                     title.innerText = `MBTI`;
